@@ -8,6 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+MereLogs/
+MereLogs
 build/
 develop-eggs/
 dist/
