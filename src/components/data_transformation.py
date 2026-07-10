@@ -23,7 +23,7 @@ class DataTransformation:
     def initiate_data_transformation(self,train_data_path,test_data_path):
         try:
             logging.info("entered into DataTransformation class")
-            preprocessor_path=os.path.join("artifacts","proprocessor_saved")
+            preprocessor_path=os.path.join("artifacts","proprocessor_saved.pkl")
             logging.info("reading the data from the path returned by data ingestion class")
             train_data=pd.read_csv(train_data_path)
             test_data=pd.read_csv(test_data_path)

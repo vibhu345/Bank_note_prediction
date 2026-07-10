@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from src.exception import CustomException
 import sys
+from src.prediction_pipeline.model_predict import ModelPredict
 from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import Model_training
 from sklearn.utils import resample
@@ -49,6 +50,8 @@ if __name__=="__main__":
         x_train_dataframe,x_test_dataframe,y_train_dataframe,y_test_dataframe,preprocessor_obj=obj1.initiate_data_transformation(train_data_path,test_data_path)
         obj2=Model_training()
         obj2.initiate_model_training(x_train_dataframe,x_test_dataframe,y_train_dataframe,y_test_dataframe)
+    
+
     except Exception as e :
         raise CustomException(e,sys)
 
